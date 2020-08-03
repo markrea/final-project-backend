@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/recipes', recipesRouter);
+app.use('/', recipesRouter);
 app.use('/moreDetails', moreDetailsRouter);
 app.use('/random', randomRouter);
 app.use('/wine', wineRouter);
