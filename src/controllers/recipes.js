@@ -10,3 +10,11 @@ exports.getRecipeByIngredients = async (req, res) => {
   const json = await fetchResponse.json();
   res.status(200).json(json);
 };
+
+exports.getRecipeByName = async (req, res) => {
+  const { query } = req.query;
+  const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY3}&query=${query}&number=2`;
+  const fetchResponse = await fetch(apiUrl);
+  const json = await fetchResponse.json();
+  res.status(200).json(json);
+}
