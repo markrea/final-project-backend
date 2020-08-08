@@ -14,7 +14,7 @@ exports.getRecipeByIngredients = async (req, res) => {
 exports.getRecipeByName = async (req, res) => {
   const { query } = req.query;
   const { diet } = req.query;
-  const intolerances = req.query.intoleranceValue;
+  const { intolerances } = req.query;
   const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&diet=${diet}&intolerances=${intolerances}&addRecipeNutrition=true&apiKey=${API_KEY3}&number=2`;
   const fetchResponse = await fetch(apiUrl);
   const json = await fetchResponse.json();
