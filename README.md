@@ -40,32 +40,34 @@ e.g. 'chicken, cream'
 #### Diet
 A string detailing any diet your results must adhere to. 
 Supported diets are as follows:
--Gluten Free
--Ketogenic
--Vegetarian
--Vegan
--Lacto-Vegetarian
--Ovo-Vegetarian
--Pescatarian
--Paleo
--Primal
--Whole30
+*Gluten Free
+*Ketogenic
+*Vegetarian
+*Vegan
+*Lacto-Vegetarian
+*Ovo-Vegetarian
+*Pescatarian
+*Paleo
+*Primal
+*Whole30
 
 #### Intolerances
 A string contraining food intolerances which will be excluded from results.
 Supported intolerances are as follows:
--Dairy
--Egg
--Gluten
--Grain
--Peanut
--Seafood
--Sesame
--Shellfish
--Soy
--Sulfite
--Tree Nut
--Wheat
+*Dairy
+*Egg
+*Gluten
+*Grain
+*Peanut
+*Seafood
+*Sesame
+*Shellfish
+*Soy
+*Sulfite
+*Tree Nut
+*Wheat
+
+
 
 #### Example Request
 GET [http://localhost:9000/recipes?ingredients=chicken&diet=glutenfree&intolerances=egg]
