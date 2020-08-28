@@ -1,6 +1,6 @@
 # Fridge Tracker 
 
-This project is the backend for the Fridge Tracker app.
+This project is the backend for the Fridge Tracker app.\
 It links to the Spoonacular recipes API and requires an API key to make requests.
 
 ## Getting started
@@ -24,13 +24,13 @@ Visit [https://spoonacular.com/food-api] and create an account to get your API k
 
 Once you have your API key create a file titled .env at the top level of your project. 
 
-Inside your .env file write a single line:
+Inside your .env file write a single line:  
 API_KEY={your API key}
 
 ## End Points
 
 ### Search Recipes By Ingredient
-GET [http://localhost:9000/recipes]
+GET [http://localhost:9000/recipes]  
 Searching by ingredient can take the following parameters:
 
 #### Ingredient
@@ -70,7 +70,54 @@ Supported intolerances are as follows:
 
 
 #### Example Request
-GET [http://localhost:9000/recipes?ingredients=chicken&diet=glutenfree&intolerances=egg]
+GET [http://localhost:9000/recipes?ingredients=chicken&diet=glutenfree&intolerances=egg]  
+
+
+### Search Recipes By Name
+GET [http://localhost:9000/recipename]  
+Searching by recipe can take the following parameters:
+
+#### Query
+A comma seperated string containing the recipe name that you wish to search for 
+e.g. 'fajitas'
+
+#### Diet
+A string detailing any diet your results must adhere to. 
+Supported diets are as follows:
+* Gluten Free
+* Ketogenic
+* Vegetarian
+* Vegan
+* Lacto-Vegetarian
+* Ovo-Vegetarian
+* Pescatarian
+* Paleo
+* Primal
+* Whole30
+
+#### Intolerances
+A string contraining food intolerances which will be excluded from results.
+Supported intolerances are as follows:
+* Dairy
+* Egg
+* Gluten
+* Grain
+* Peanut
+* Seafood
+* Sesame
+* Shellfish
+* Soy
+* Sulfite
+* Tree Nut
+* Wheat
+
+
+
+#### Example Request
+GET [http://localhost:9000/recipename?query=fajitas&diet=glutenfree&intolerances=egg]
+
+
+
 
 
 
