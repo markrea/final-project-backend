@@ -31,13 +31,14 @@ API_KEY={your API key}
 
 ### Search Recipes By Ingredient
 GET [http://localhost:9000/recipes]  
-Searching by ingredient can take the following parameters:
 
-#### Ingredient
+#### Searching by ingredient can take the following parameters:
+
+##### Ingredient
 A comma seperated string containing ingredients you wish to search for 
 e.g. 'chicken, cream'
 
-#### Diet
+##### Diet
 A string detailing any diet your results must adhere to. 
 Supported diets are as follows:
 * Gluten Free
@@ -51,7 +52,7 @@ Supported diets are as follows:
 * Primal
 * Whole30
 
-#### Intolerances
+##### Intolerances
 A string contraining food intolerances which will be excluded from results.
 Supported intolerances are as follows:
 * Dairy
@@ -78,7 +79,7 @@ GET [http://localhost:9000/recipename]
 Searching by recipe can take the following parameters:
 
 #### Query
-A comma seperated string containing the recipe name that you wish to search for 
+A string containing the recipe name that you wish to search for 
 e.g. 'fajitas'
 
 #### Diet
@@ -114,7 +115,16 @@ Supported intolerances are as follows:
 
 
 #### Example Request
-GET [http://localhost:9000/recipename?query=fajitas&diet=glutenfree&intolerances=egg]
+GET [http://localhost:9000/recipename?query=fajitas&diet=glutenfree&intolerances=egg]  
+
+
+### Random Recipe
+
+GET [http://localhost:9000/random]  
+
+Random Recipe returns a random selection of recipes and takes no parameters.
+
+
 
 
 
